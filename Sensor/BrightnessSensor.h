@@ -1,7 +1,7 @@
-#ifndef BRIGHTNESS_METER_H_
-#define BRIGHTNESS_METER_H_
+#ifndef BRIGHTNESS_SENSOR_H_
+#define BRIGHTNESS_SENSOR_H_
 
-class BrightnesMeter : public Meter{
+class BrightnessSensor : public Sensor{
     public:
         float getValue();
         void update();
