@@ -1,12 +1,12 @@
-#ifndef _SENSOR_H_
-#define _SENSOR_H_
+#ifndef _METER_H_
+#define _METER_H_
 
-class Sensor {
+class Meter {
     public:
-        Sensor();
-        ~Sensor();
+        Meter();
+        ~Meter();
         virtual float getValue();
         virtual void update();
-}
+};
 
 #endif
