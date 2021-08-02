@@ -1,17 +1,17 @@
 
 
-Sensor::Sensor(){
+Meter::Meter(){
 
 }
 
-Sensor::~Sensor(){
+Meter::~Meter(){
 
 }
 
-float Sensor::getValue(){
+float Meter::getValue(){
 
 }
 
-void Sensor::update(){
+void Meter::update(){
     
 }
