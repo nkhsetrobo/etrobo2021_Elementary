@@ -3,12 +3,15 @@
 
 class ArmAngMeter : public Meter{
     public:
+        ArmAngMeter(const ev3api::Motor& motor);
+        ~ArmAngMeter();
         float getValue();
         void update();
         void reset();
     
     private:
         float angle;
-}
+        const ev3api::Motor& mt;
+};
 
 #endif

@@ -3,11 +3,14 @@
 
 class TailAngMeter : public Meter{
     public:
+        TailAngMeter();
+        ~TailAngMeter();
         float getValue();
         void update();
     
     private:
         float angle;
+        const ev3api::GyroSensor& gr;
 }
 
 #endif
