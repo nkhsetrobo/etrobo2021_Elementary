@@ -5,7 +5,7 @@
 *@param leftWheel 左モータ
 *@param rightWheel 右モータ
 */
-Walker::Walker(MotorMgmt *motor)
+Walker::Walker(WheelMotorMgmt *motor)
     :mMotorMgmt(motor)
     {
 

@@ -5,15 +5,16 @@
 class SimpleWalker : public Walker{
 
     public:
-        SimpleWalker(MotorMgmt *motor);
+        SimpleWalker(WheelMotorMgmt *motor);
         ~SimpleWalker();
         void run();
         void init();
-        void setParameter();
+        void setParameter(int forward,int turn);
 
     private:
-        int advance_amount;
-        int turning_amount;
+        int mForward;
+        int mTurn;
+        
 
 };
 

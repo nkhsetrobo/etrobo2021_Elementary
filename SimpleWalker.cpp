@@ -1,22 +1,15 @@
 #include "SimpleWalker.h"
 
-//前進量
-const int SimpleWalker::LOW=30
-const int SimpleWalker::NORMAL=50
-const int SimpleWalker::HIGH=70
-// 旋回量
-const int SimpleWalker::RIGHT=0
-const int SimpleWalker::LEFT=1
 /**
     *コンストラクタ
     * @param lefWheel 右モータ
     * @param rightWheel 左モータ
 */
-SimpleWalker:SimpleWalker(MotorMgmt *motor)
+SimpleWalker::SimpleWalker(WheelMotorMgmt *motor)
                                                      
     :Walker(motor),
-     mForward(LOW),
-     mTurn(RIGHT){
+     mForward(0),
+     mTurn(0){
      }
 
 
@@ -25,28 +18,11 @@ void SimpleWalker::run(){
 //左右モーターに回転を指示
     int rightPWM=0;
     int leftPWM=0;
-
-    if(mTurn==RIGHT){
-        rightPWM=0;
-        leftPWM=mForward;
-    }else if(mTurn==LEFT){
-        leftPWM=0;
-        rightPWM=mForward
-    }else {
-        rightPWM=mForward
-        leftPWM=mForward
-    }
-        mRightWheel.setPWM(rightPWM);
-        mLeftWheel.setPWM(leftPWM);
-}
-
-//初期化する
-void SimpleWalker::init
-void Walker:init(){
-//モーターをりセット
-    mRightWheel.reset();
-    mLeftWheel.reset();
-
+    int advance_amount=mForward;
+    int  turning_amount=mTurn;
+    rightPWM=(advance_amount+turning_amount);
+    leftPWM=(advance_amount-turning_amount);
+    mMotorMgmt->walkDriveOrder(rightPWM,leftPWM);
 }
 
 
