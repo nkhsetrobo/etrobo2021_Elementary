@@ -7,6 +7,7 @@
  *****************************************************************************/
 
 #include "app.h"
+#include "MyColorSensor.h"
 
 // デストラクタ問題の回避
 // https://github.com/ETrobocon/etroboEV3/wiki/problem_and_coping
@@ -27,13 +28,18 @@ Motor       gRightWheel(PORT_B);
 Clock       gClock;
 
 // オブジェクトの定義
-
+static BrightnessMeter  *gBrightnessMeter;
+static MyColorSensor    *gMyColorSensor;
 /**
  * EV3システム生成
  */
 static void user_system_create() {
     // [TODO] タッチセンサの初期化に2msのdelayがあるため、ここで待つ
     tslp_tsk(2U * 1000U);
+
+    //オブジェクトの生成
+    gBrightnessMeter    = new BrightnesMeter();
+    gMyColorSensor      = new MyColorSensor(gBrightnessMeter,gColorSensor);
 
     // 初期化完了通知
     ev3_led_set_color(LED_ORANGE);
@@ -76,7 +82,6 @@ void tracer_task(intptr_t exinf) {
     if (ev3_button_is_pressed(BACK_BUTTON)) {
         wup_tsk(MAIN_TASK);  // バックボタン押下
     } else {
-        gRandomWalker->run();  // 走行
     }
 
     ext_tsk();

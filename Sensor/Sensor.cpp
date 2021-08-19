@@ -1,17 +1,17 @@
+#include "Sensor.h"
 
-
-Meter::Meter(){
-
-}
-
-Meter::~Meter(){
+Sensor::Sensor(){
 
 }
 
-float Meter::getValue(){
+Sensor::~Sensor(){
 
 }
 
-void Meter::update(){
+float Sensor::getValue(){
+
+}
+
+void Sensor::update(){
     
 }

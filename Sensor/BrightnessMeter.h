@@ -1,18 +1,19 @@
 #ifndef BRIGHTNESS_METER_H_
 #define BRIGHTNESS_METER_H_
 
-#include "ColorSensor.h"
+#include "Sensor.h"
 
-class BrightnesMeter : public Meter{
+
+class BrightnessMeter : public Sensor
+{
     public:
-        BrightnesMeter(const ev3api::ColorSensor& color_sensor);
-        ~BrightnesMeter();
+        BrightnessMeter();
+        ~BrightnessMeter();
         float getValue();
-        void update();
+        void update(float val);
     
     private:
         float brightness;
-        const ev3api::ColorSensor& cr;
-}
+};
 
 #endif
