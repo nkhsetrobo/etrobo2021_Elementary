@@ -2,6 +2,7 @@
 #define WHEEL_MOTOR_MGMT_H_
 #include "ev3api.h"
 #include "Motor.h"
+#include "BrightnessSensor.h"
 
 class WheelMotorMgmt {
     public:
