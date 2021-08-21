@@ -1,8 +1,12 @@
 #include"SelfPosEst.h"
-
+#include "math.h"
+#define M_PI 3.14159
+#define D_LEFT 9.0
+#define D_RIGHT 9.0
+#define TREAD 14
 
 //自己位置計算
-void SelfPosEst::SelfPosCalc(){
+void SelfPosEst::SelfPosCalc(float current_rs1,float current_rs2){
 
 float rs1 = current_rs1;
 	float rs2 = current_rs2;
@@ -20,4 +24,6 @@ float rs1 = current_rs1;
 	th+=dth; // 左旋回＋、右旋回-
 	sumlen += (len_r+len_l)/2.0;
 
+	prev_rs1=current_rs1;
+	prev_rs2=current_rs2;
 }
