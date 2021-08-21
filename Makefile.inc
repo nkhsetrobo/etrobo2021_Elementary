@@ -1,14 +1,17 @@
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 APPL_CXXOBJS += \
-	Walker.o \
-	LineTracer.o \
-	Scenario.o \
-	ScenarioTracer.o \
-	RandomWalker.o \
-	LineMonitor.o \
-	Starter.o \
-	SimpleTimer.o
+	StageMgmt.o \
+	SectionMgmt.o \
+	BrightnessSensor.o\
+	MyColorSensor.o\
+	MySensor.o\
+	Walker.o\
+	SimpleWalker.o\
+	WheelMotorMgmt.o\
+	SelfPosEst.o
+
+
 
 SRCLANG := c++
 
@@ -19,8 +22,13 @@ include $(EV3RT_SDK_LIB_DIR)/libcpp-ev3/Makefile
 
 endif
 
-APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit
+APPL_DIRS += $(mkfile_path)Sensor $(mkfile_path)Walker $(mkfile_path)StageMgmt $(mkfile_path)Section
 
 INCLUDES += \
-	-I$(mkfile_path)app \
-	-I$(mkfile_path)unit
+	-I$(mkfile_path)Sensor \
+	-I$(mkfile_path)Walker \
+	-I$(mkfile_path)Section\
+	-I$(mkfile_path)StageMgmt
+
+
+
