@@ -1,7 +1,7 @@
 #ifndef _WALKER_H
 #define _WALKER_H
 #include "WheelMotorMgmt.h"
-#include "ev3api.h"
+//#include "ev3api.h"
 
 class Walker{
     public:
