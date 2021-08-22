@@ -1,6 +1,7 @@
+
 #include "MyColorSensor.h"
 
-MyColorSensor::MyColorSensor(const BrightnesMeter& brightness_meter,const ev3api::ColorSensor& color_sensor)
+MyColorSensor::MyColorSensor(const BrightnessMeter& brightness_meter,const ev3api::ColorSensor& color_sensor)
     :br(brightness_meter),
      cr(color_sensor)
     {
@@ -17,5 +18,6 @@ float MyColorSensor::brightnessCalc() {
 }
 
 void MyColorSensor::update() {
-    br.update(brightnessCalc());
+    float temp = this->brightnessCalc();
+    br.update(temp);
 }

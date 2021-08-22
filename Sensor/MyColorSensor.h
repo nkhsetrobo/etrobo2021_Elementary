@@ -6,13 +6,13 @@
 
 class MyColorSensor {
     public:
-        MyColorSensor(const BrightnesMeter& brightness_meter,const ev3api::ColorSensor& color_sensor);
+        MyColorSensor(const BrightnessMeter& brightness_meter,const ev3api::ColorSensor& color_sensor);
         ~MyColorSensor();
-        float brightnessCalc();
+        float brightnessCalc() ;
         void update();
 
     private:
-        const BrightnesMeter& br;
+        const BrightnessMeter& br;
         const ev3api::ColorSensor& cr;
 };
 

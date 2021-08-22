@@ -1,12 +1,12 @@
 #ifndef BRIGHTNESS_METER_H_
 #define BRIGHTNESS_METER_H_
 
-#include "Sensor.h"
+#include "MySensor.h"
 
 
-class BrightnessMeter : public Sensor
-{
+class BrightnessMeter {
     public:
+
         BrightnessMeter();
         ~BrightnessMeter();
         float getValue();
