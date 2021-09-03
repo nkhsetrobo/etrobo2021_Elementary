@@ -17,6 +17,13 @@
 #include "MyColorSensor.h"
 #include "MySensor.h"
 #include "SectionMgmt.h"
+#include "SimpleWalker.h"
+#include "WheelMotorMgmt.h"
+#include "XPosition.h"
+#include "YPosition.h"
+#include "MileageSensor.h"
+#include "TurnAngSensor.h"
+#include "ScenarioCurveLineTreacer.h"
 
 // デストラクタ問題の回避
 // https://github.com/ETrobocon/etroboEV3/wiki/problem_and_coping
@@ -36,12 +43,23 @@ Motor       gLeftWheel(PORT_C);
 Motor       gRightWheel(PORT_B);
 Clock       gClock;
 // オブジェクトの定義
-static StageMgmt    *gStageMgmt;
-static SectionMgmt  *gSectionMgmt;
-static BrightnessSensor *gBrightnessSensor;
-static MyColorSensor *gMyColorSensor;
-
-
+ StageMgmt    *gStageMgmt;
+ SectionMgmt  *gSectionMgmt;
+ BrightnessSensor *gBrightnessSensor;
+ MyColorSensor *gMyColorSensor;
+ SimpleWalker *gSimpleWalker;
+ WheelMotorMgmt *gWheelMotorMgmt;
+ XPosition       *gXPosition;
+ YPosition       *gYPosition;
+ SpeedSensor     *gSpeedSensor;
+ TurnAngSensor   *gTurnAngSensor;
+ MileageSensor   *gMileageSensor;
+ ScenarioCurveLineTracer  *gScenarioCurveLineTracer;
+    //judgement クラス
+MileageCondition    *gMileageCondition;
+ArmAngCondition     *gArmAngCondition;
+TailAngCondition    *gTailAngCondition;
+TurnAngCondition    *gTurnAngCondition;
 
  //* EV3システム生成
  
@@ -54,6 +72,18 @@ static void user_system_create() {
     gSectionMgmt        = new SectionMgmt();
     gBrightnessSensor   = new BrightnessSensor();
     gMyColorSensor      = new MyColorSensor(gBrightnessSensor,gColorSensor);
+    gWheelMotorMgmt     =new WheelMotorMgmt(gLeftWheel,gRightWheel);
+    gSimpleWalker       =new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gSpeedSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor,gScenarioCurveLineTracer);
+    gXPosition          =new XPosition();
+    gYPosition          =new YPosition();
+    gTurnAngSensor       =new TurnAngSensor();
+    gMileageSensor       =new MileageSensor();
+    gScenarioCurveLineTracer  =new ScenarioCurveLineTracer();
+    // 判定_オブジェクトの作成
+    gMileageCondition   = new MileageCondition(gMileageSensor);
+    gArmAngCondition    = new ArmAngCondition(g);
+    gTailAngCondition   = new TailAngCondition(g);
+    gTurnAngCondition   = new TurnAngCondition(gTurnAngSensor);
 
     // 初期化完了通知
     ev3_led_set_color(LED_ORANGE);
