@@ -23,6 +23,7 @@
 #include "YPosition.h"
 #include "MileageSensor.h"
 #include "TurnAngSensor.h"
+#include "LineTracer.h"
 #include "ScenarioCurveLineTreacer.h"
 
 // デストラクタ問題の回避
@@ -43,25 +44,21 @@ Motor       gLeftWheel(PORT_C);
 Motor       gRightWheel(PORT_B);
 Clock       gClock;
 // オブジェクトの定義
- StageMgmt                  *gStageMgmt;
- SectionMgmt                *gSectionMgmt;
- BrightnessSensor           *gBrightnessSensor;
- MyColorSensor              *gMyColorSensor;
- SimpleWalker               *gSimpleWalker;
- WheelMotorMgmt             *gWheelMotorMgmt;
- XPosition                  *gXPosition;
- YPosition                  *gYPosition;
- SpeedSensor                *gSpeedSensor;
- TurnAngSensor              *gTurnAngSensor;
- MileageSensor              *gMileageSensor;
- TailAngSensor              *gTailAngSensor;
- ArmAngSensor               *gArmAngSensor;
- ScenarioCurveLineTracer    *gScenarioCurveLineTracer;
-    //judgement クラス
- MileageCondition           *gMileageCondition;
- ArmAngCondition            *gArmAngCondition;
- TailAngCondition           *gTailAngCondition;
- TurnAngCondition           *gTurnAngCondition;
+ StageMgmt    *gStageMgmt;
+ SectionMgmt  *gSectionMgmt;
+ BrightnessSensor *gBrightnessSensor;
+ MyColorSensor *gMyColorSensor;
+ SimpleWalker *gSimpleWalker;
+ WheelMotorMgmt *gWheelMotorMgmt;
+ XPosition       *gXPosition;
+ YPosition       *gYPosition;
+ //SpeedSensor     *gSpeedSensor;
+ TurnAngSensor   *gTurnAngSensor;
+ MileageSensor   *gMileageSensor;
+ LineTracer      *gLineTracer;
+ ScenarioCurveLineTracer  *gScenarioCurveLineTracer;
+ 
+
 
  //* EV3システム生成
  
@@ -70,25 +67,20 @@ static void user_system_create() {
     tslp_tsk(2U * 1000U);
 
     // オブジェクトの作成
-    gStageMgmt                  = new StageMgmt();
-    gSectionMgmt                = new SectionMgmt();
-    gBrightnessSensor           = new BrightnessSensor();
-    gMyColorSensor              = new MyColorSensor(gBrightnessSensor,gColorSensor);
-    gWheelMotorMgmt             = new WheelMotorMgmt(gLeftWheel,gRightWheel);
-    gSimpleWalker               = new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gSpeedSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor,gScenarioCurveLineTracer);
-    gXPosition                  = new XPosition();
-    gYPosition                  = new YPosition();
-    gTurnAngSensor              = new TurnAngSensor();
-    gMileageSensor              = new MileageSensor();
-    gTailAngSensor              = new TailAngSensor();
-    gArmAngSensor               = new ArmAngSensor();
-    gScenarioCurveLineTracer    = new ScenarioCurveLineTracer();
-    // 判定_オブジェクトの作成
-    gMileageCondition           = new MileageCondition(gMileageSensor);
-    gArmAngCondition            = new ArmAngCondition(gArmAngSensor);
-    gTailAngCondition           = new TailAngCondition(gTailAngSensor);
-    gTurnAngCondition           = new TurnAngCondition(gTurnAngSensor);
+    gStageMgmt          = new StageMgmt();
+    gSectionMgmt        = new SectionMgmt();
+    gBrightnessSensor   = new BrightnessSensor();
+    gMyColorSensor      = new MyColorSensor(gBrightnessSensor,gColorSensor);
+    gWheelMotorMgmt     =new WheelMotorMgmt(gLeftWheel,gRightWheel);
+    gSimpleWalker       =new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
+    gXPosition          =new XPosition();
+    gYPosition          =new YPosition();
+    gTurnAngSensor      =new TurnAngSensor();
+    gMileageSensor      =new MileageSensor();
+    gLineTracer         =new LineTracer(gWheelMotorMgmt,gBrightnessSensor, gTurnAngSensor,gSpeedSensor,gXPosition,gYPosition,gMileageSensor);
+    gScenarioCurveLineTracer  =new ScenarioCurveLineTracer();
 
+    
     // 初期化完了通知
     ev3_led_set_color(LED_ORANGE);
 }
