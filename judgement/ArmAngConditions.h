@@ -6,7 +6,7 @@
 
 class ArmAngConditions : public judgement{
     public:
-        ArmAngConditions();
+        ArmAngConditions(ArmAngSensor *Angle);
         ~ArmAngConditions();
         bool judge();
         void setParameter(float ArmAng);
@@ -14,6 +14,10 @@ class ArmAngConditions : public judgement{
 
      private:
         float mArmAng;
+        float aArmAng;
+        float Sum;
+        int UorD;
+        int mode;
 }
 
 #endif

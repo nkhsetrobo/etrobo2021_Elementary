@@ -15,6 +15,7 @@ class TailAngConditions : public judgement{
         float mTailAng;
         float aTailAng;
         float Sum;
+        int UorD;
         int mode;
 }
 

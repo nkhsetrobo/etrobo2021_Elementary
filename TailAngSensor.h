@@ -7,6 +7,8 @@ class TailAngSensor : public MySensor{
     public:
         TailAngSensor();
         ~TailAngSensor();
+    private:
+        float Angle;
 };
 
 #endif

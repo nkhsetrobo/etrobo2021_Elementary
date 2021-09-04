@@ -9,7 +9,7 @@ class TurnAngConditions : public judgement{
         TurnAngConditions(TurnAngSensor *TurnAng);
         ~TurnAngConditions();
         bool judge();
-        void setParameter(float TurnAng);
+        void setParameter(float TurnAng[]);
         float getValue();
 
      private:
@@ -19,5 +19,4 @@ class TurnAngConditions : public judgement{
         int LorR;
         int mode;
 }
-
 #endif

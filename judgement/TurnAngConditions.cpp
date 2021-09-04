@@ -17,7 +17,7 @@ bool TurnAngConditions::judge(){
     //左右の分岐
     if(LorR == 1 ){
         //計測した値が越えたら終了(左旋回)
-        if(Sum < mTurnAngConditions->getValue()){
+        if(Sum < mTurnAngSensor->getValue()){
             return true;
         } else {
             return false;
@@ -25,7 +25,7 @@ bool TurnAngConditions::judge(){
 
     } else {
         //計測した値が越えたら終了(右旋回)
-        if(Sum > mTurnAngConditions->getValue()){
+        if(Sum > mTurnAngSensor->getValue()){
             return true;
         } else {
             return false;

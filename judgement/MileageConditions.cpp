@@ -6,21 +6,26 @@ MileageConditions::MileageConditions(MileageSensor *Mileage)
 
 //判定する
 void MileageConditions::judge(){
+    //前後判定
     if(FwardorBward == 0){
         //計測した値が越えたら終了(前進)
-        if(aMiles < mMileageCondition->getValue()){
+        if(aMiles < mMileageSensor->getValue()){
             return true;
         } else {
             return false;
         }
     } else {
         //計測した値が越えたら終了(後退)
-        if(aMiles > mMileageCondition->getValue()){
+        if(aMiles > mMileageSensor->getValue()){
             return true;
         } else {
             return false;
         }
     }
+}
+
+float MileageConditions::getValue(){
+    return mMiles;
 }
 
 /**
