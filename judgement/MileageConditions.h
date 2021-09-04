@@ -9,7 +9,7 @@ class MileageConditions : public judgement{
         MileageConditions(MileageSensor *Mileage);
         ~MileageConditions();
         bool judge();
-        void setParameter(float Miles);
+        void setParameter(float Miles[]);
         float getValue();
 
     private:
