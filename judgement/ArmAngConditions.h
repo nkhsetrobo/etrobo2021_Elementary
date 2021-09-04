@@ -2,6 +2,7 @@
 #define ARM_ANG_CONDITIONS
 
 #include "judgement.h"
+#include "ArmAngSensor.h"
 
 class ArmAngConditions : public judgement{
     public:
@@ -9,6 +10,7 @@ class ArmAngConditions : public judgement{
         ~ArmAngConditions();
         bool judge();
         void setParameter(float ArmAng);
+        float getValue();
 
      private:
         float mArmAng;

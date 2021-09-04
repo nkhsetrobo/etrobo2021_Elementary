@@ -2,6 +2,7 @@
 #define TAIL_ANG_CONDITIONS
 
 #include "judgement.h"
+#include "TailAngSensor.h"
 
 class TailAngConditions : public judgement{
     public:
@@ -9,8 +10,12 @@ class TailAngConditions : public judgement{
         ~TailAngConditions();
         bool judge();
         void setParameter(float TailAng);
+        float getValue();
     private:
         float mTailAng;
+        float aTailAng;
+        float Sum;
+        int mode;
 }
 
 
