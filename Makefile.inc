@@ -38,7 +38,7 @@ include $(EV3RT_SDK_LIB_DIR)/libcpp-ev3/Makefile
 
 endif
 
-APPL_DIRS += $(mkfile_path)Sensor $(mkfile_path)Walker $(mkfile_path)StageMgmt $(mkfile_path)Section
+APPL_DIRS += $(mkfile_path)Sensor $(mkfile_path)Walker $(mkfile_path)StageMgmt $(mkfile_path)Section  $(mkfile_path)judgement
 
 INCLUDES += \
 	-I$(mkfile_path)Sensor \
