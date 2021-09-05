@@ -17,7 +17,12 @@ APPL_CXXOBJS += \
 	PID.o\
 	LineTracer.o\
 	ScenarioCurveLineTracer.o
-	
+	ArmAngConditions.o\
+	judgement.o\
+	MileageConditions.o\
+	TailAngConditions.o\
+	TurnAngConditions.o
+
 	
 	
 	
@@ -39,7 +44,9 @@ INCLUDES += \
 	-I$(mkfile_path)Sensor \
 	-I$(mkfile_path)Walker \
 	-I$(mkfile_path)Section\
-	-I$(mkfile_path)StageMgmt
+	-I$(mkfile_path)StageMgmt\
+	-I$(mkfile_path)judgement
+
 
 
 
