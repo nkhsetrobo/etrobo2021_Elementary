@@ -7,7 +7,10 @@ class SlalomB : public SectionMgmt{
     public:
         SlalomB();
         bool Run();
-}
+    private:
+        int SCidx;
+        int SClast;
+};
 
 
 #endif
