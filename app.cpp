@@ -19,6 +19,7 @@
 #include "SectionMgmt.h"
 #include "SimpleWalker.h"
 #include "WheelMotorMgmt.h"
+#include "ArmTailMotorMgmt.h"
 #include "XPosition.h"
 #include "YPosition.h"
 #include "MileageSensor.h"
@@ -63,6 +64,7 @@ Clock       gClock;
  MyColorSensor *gMyColorSensor;
  SimpleWalker *gSimpleWalker;
  WheelMotorMgmt *gWheelMotorMgmt;
+ ArmTailMotorMgmt *gArmTailMotorMgmt;
  XPosition       *gXPosition;
  YPosition       *gYPosition;
  //SpeedSensor     *gSpeedSensor;
@@ -103,6 +105,7 @@ static void user_system_create() {
     gBrightnessSensor   = new BrightnessSensor();
     gMyColorSensor      = new MyColorSensor(gBrightnessSensor,gColorSensor);
     gWheelMotorMgmt     =new WheelMotorMgmt(gLeftWheel,gRightWheel);
+    gArmTailMotorMgmt   =new ArmTailMotorMgmt(gArmmotor,gTailmotor,gArmAngSensor,gTailAngSensor,gTail);
     gSimpleWalker       =new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gXPosition          =new XPosition();
     gYPosition          =new YPosition();
@@ -127,6 +130,7 @@ static void user_system_create() {
     gSlalomA                    = new SlalomA();
     gSlalomB                    = new SlalomB();
     gDerailing                  = new Derailing();
+    
 
 
     // 初期化完了通知

@@ -1,9 +1,11 @@
 #ifndef ARM_TAIL_MOTOR_MGMT
 #define ARM_TAIL_MOTOR_MGMT
 
+#include "ev3api.h"
 #include "Motor.h"
 #include "ArmAngSensor.h"
 #include "TailAngSensor.h"
+
 
 class ArmTailMotorMgmt {
     public:
