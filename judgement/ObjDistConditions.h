@@ -10,5 +10,5 @@ class ObjDistConditions : public judgement{
         bool judge();
         void setParameter(float []);
         float getValue();
-}
+};
 #endif
