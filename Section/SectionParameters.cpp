@@ -4,7 +4,12 @@ SectionParameters::SectionParameters(){
 
 }
 
-int SectionParameters::transition(int Section){
+/**
+ * パラメータ
+ * @param Section セクションパラメータ
+*/
 
+int SectionParameters::transition(int Section){
+    SecParam = Section + 1;
     return SecParam;
 }
