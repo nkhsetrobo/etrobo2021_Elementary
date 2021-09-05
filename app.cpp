@@ -116,8 +116,8 @@ static void user_system_create() {
 
     // 区間_オブジェクトの作成
     gSectionParameters          = new SectionParameters();
-    gSectionMgmt                = new SectionMgmt(gSectionParameters);
-    gSectionRun                 = new SectionRun(gMileageConditions);
+    gSectionMgmt                = new SectionMgmt();
+    gSectionRun                 = new SectionRun();
     gSpeedCourse                = new SpeedCourse();
     gSlalomA                    = new SlalomA();
     gSlalomB                    = new SlalomB();
