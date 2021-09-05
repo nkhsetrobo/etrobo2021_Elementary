@@ -1,9 +1,9 @@
 #include "ColorConditions.h"
 
 ColorConditions::ColorConditions()
-    :judgement();
+    :judgement()
 
-void ColorConditions::judge(){
+bool ColorConditions::judge(){
 
 
 }

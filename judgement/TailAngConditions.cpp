@@ -1,10 +1,10 @@
 #include "TailAngConditions.h"
 
 TailAngConditions::TailAngConditions()
-    :judgement();
+    :judgement()
 
 //判定する
-void TailAngConditions::judge(){
+bool TailAngConditions::judge(){
     //上下判定
     if(){
         //計測した値が越えたら終了(上昇)
