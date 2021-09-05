@@ -32,6 +32,11 @@
 #include "TailAngConditions.h"
 #include "TurnAngConditions.h"
 
+#include "SpeedCourse.h"
+#include "SlalomA.h"
+#include "SlalomB.h"
+#include "Derailing.h"
+
 
 // デストラクタ問題の回避
 // https://github.com/ETrobocon/etroboEV3/wiki/problem_and_coping
