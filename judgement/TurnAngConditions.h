@@ -2,11 +2,10 @@
 #define TURN_ANG_CONDITIONS
 
 #include "judgement.h"
-#include "TurnAngSensor.h"
 
 class TurnAngConditions : public judgement{
     public:
-        TurnAngConditions(TurnAngSensor *TurnAng);
+        TurnAngConditions();
         ~TurnAngConditions();
         bool judge();
         void setParameter(float TurnAng[]);
@@ -18,5 +17,5 @@ class TurnAngConditions : public judgement{
         float Sum;
         int LorR;
         int mode;
-}
+};
 #endif
