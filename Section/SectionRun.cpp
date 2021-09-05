@@ -19,8 +19,8 @@ SectionRun::SectionRun(){
     //mJudgeMethod配列の初期化
     mJudgeMethod[MILEAGE] = gMileageConditions;
     mJudgeMethod[TURNANG] = gTurnAngConditions;
-    mJudgeMethod[ARMANG] = gArmAngConditions;  未実装
-    mJudgeMethod[TAILANG] = gTailAngConditions;  未実装
+    mJudgeMethod[ARMANG] = gArmAngConditions; 
+    mJudgeMethod[TAILANG] = gTailAngConditions; 
 
 }
 
