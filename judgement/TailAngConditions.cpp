@@ -10,7 +10,7 @@ TailAngConditions::TailAngConditions()
 //判定する
 bool TailAngConditions::judge(){
     //上下判定
-    if(){
+    if(UorD == 0){
         //計測した値が越えたら終了(上昇)
         if(aTailAng < mTailAngSensor->getValue()){
             return true;
