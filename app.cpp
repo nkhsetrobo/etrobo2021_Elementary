@@ -37,6 +37,7 @@
 #include "SlalomB.h"
 #include "Derailing.h"
 #include "ArmAngSensor.h"
+#include "TailAngSensor.h"
 
 
 // デストラクタ問題の回避
@@ -71,6 +72,7 @@ Clock       gClock;
  ScenarioCurveLineTracer  *gScenarioCurveLineTracer;
  SelfPosEst     *gSelfPosEst;
  ArmAngSensor   *gArmAngSensor;
+ TailAngSensor  *gTailAngSensor;
 
   //判定クラスの定義
  MileageConditions    *gMileageConditions;
@@ -110,6 +112,7 @@ static void user_system_create() {
     gScenarioCurveLineTracer  =new ScenarioCurveLineTracer(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gSelfPosEst         =new SelfPosEst(gMileageSensor,gXPosition,gYPosition,gTurnAngSensor,gWheelMotorMgmt);
     gArmAngSensor       =new ArmAngSensor();
+    gTailAngSensor      =new TailAngSensor();
     // 判定_オブジェクトの作成
     gMileageConditions           = new MileageConditions();
     gArmAngConditions            = new ArmAngConditions();
