@@ -23,7 +23,8 @@ APPL_CXXOBJS += \
 	TailAngConditions.o\
 	TurnAngConditions.o\
 	Derailing.o\
-	SectionRun.o
+	SectionRun.o\
+	ArmAngSensor.o
 
 
 	
