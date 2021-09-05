@@ -35,10 +35,6 @@ bool TurnAngConditions::judge(){
 
 }
 
-float TurnAngConditions::getValue(){
-    return mTurnAng;
-}
-
 
 /**
  * パラメータを設定する

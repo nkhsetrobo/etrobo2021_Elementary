@@ -9,7 +9,6 @@ class TurnAngConditions : public judgement{
         ~TurnAngConditions();
         bool judge();
         void setParameter(float TurnAng[]);
-        float getValue();
 
      private:
         float mTurnAng;
