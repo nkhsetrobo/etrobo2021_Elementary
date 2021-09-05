@@ -8,7 +8,6 @@ class TailAngConditions : public judgement{
         ~TailAngConditions();
         bool judge();
         void setParameter(float TailAng[]);
-        float getValue();
     private:
         float mTailAng;
         float aTailAng;
