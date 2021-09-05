@@ -1,7 +1,7 @@
 #include "ArmAngConditions.h"
 
 ArmAngConditions::ArmAngConditions()
-    :judgement();
+    :judgement()
 
 
 //判定する
