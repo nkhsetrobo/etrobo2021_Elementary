@@ -1,6 +1,6 @@
 #include "MileageConditions.h"
 
-MileageConditions::MileageConditions(MileageSensor *Mileage)
+MileageConditions::MileageConditions()
     :judgement();
 
 
