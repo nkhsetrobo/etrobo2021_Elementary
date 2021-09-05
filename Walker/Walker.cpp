@@ -12,6 +12,9 @@ Walker::Walker(WheelMotorMgmt *motor,
                  XPosition *xposition,
                  YPosition *yposition,
                  MileageSensor *mileagesensor)
+                 //ArmTailMotorMgmt   *mArmTailMotorMgmt,
+                 //TailAngSensor      *mTailAngSensor, 
+                  //ArmAngSensor       *mArmAngSensor);
     :mWheelMotorMgmt(motor),
         mBrightnessSensor(brightness),
         //mSpeedSensor(speedsensor),
@@ -19,6 +22,9 @@ Walker::Walker(WheelMotorMgmt *motor,
         mXPosition(xposition),
         mYPosition(yposition),
         mMileageSensor(mileagesensor)
+        //ArmTailMotorMgmt(armtailmotormgmt),
+        //TailAngSensor(tailangsensor,)
+        //ArmAngSensor(armangsensor)
     {
         mPID=new PID();
     }

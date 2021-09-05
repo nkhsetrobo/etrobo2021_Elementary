@@ -19,7 +19,7 @@
 #include "SectionMgmt.h"
 #include "SimpleWalker.h"
 #include "WheelMotorMgmt.h"
-#include "ArmTailMotorMgmt.h"
+//#include "ArmTailMotorMgmt.h"
 #include "XPosition.h"
 #include "YPosition.h"
 #include "MileageSensor.h"
@@ -38,7 +38,7 @@
 #include "SlalomB.h"
 #include "Derailing.h"
 #include "ArmAngSensor.h"
-#include "TailAngSensor.h"
+//#include "TailAngSensor.h"
 
 
 // デストラクタ問題の回避
@@ -64,7 +64,7 @@ Clock       gClock;
  MyColorSensor *gMyColorSensor;
  SimpleWalker *gSimpleWalker;
  WheelMotorMgmt *gWheelMotorMgmt;
- ArmTailMotorMgmt *gArmTailMotorMgmt;
+ //ArmTailMotorMgmt *gArmTailMotorMgmt;
  XPosition       *gXPosition;
  YPosition       *gYPosition;
  //SpeedSensor     *gSpeedSensor;
@@ -73,8 +73,8 @@ Clock       gClock;
  LineTracer      *gLineTracer;
  ScenarioCurveLineTracer  *gScenarioCurveLineTracer;
  SelfPosEst     *gSelfPosEst;
- ArmAngSensor   *gArmAngSensor;
- TailAngSensor  *gTailAngSensor;
+ //ArmAngSensor   *gArmAngSensor;
+ //TailAngSensor  *gTailAngSensor;
 
   //判定クラスの定義
  MileageConditions    *gMileageConditions;
@@ -105,7 +105,7 @@ static void user_system_create() {
     gBrightnessSensor   = new BrightnessSensor();
     gMyColorSensor      = new MyColorSensor(gBrightnessSensor,gColorSensor);
     gWheelMotorMgmt     =new WheelMotorMgmt(gLeftWheel,gRightWheel);
-    gArmTailMotorMgmt   =new ArmTailMotorMgmt(gArmmotor,gTailmotor,gArmAngSensor,gTailAngSensor,gTail);
+    //gArmTailMotorMgmt   =new ArmTailMotorMgmt(gArmmotor,gTailmotor,gArmAngSensor,gTailAngSensor,gTail);
     gSimpleWalker       =new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gXPosition          =new XPosition();
     gYPosition          =new YPosition();
@@ -114,12 +114,12 @@ static void user_system_create() {
     gLineTracer         =new LineTracer(gWheelMotorMgmt,gBrightnessSensor, gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gScenarioCurveLineTracer  =new ScenarioCurveLineTracer(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gSelfPosEst         =new SelfPosEst(gMileageSensor,gXPosition,gYPosition,gTurnAngSensor,gWheelMotorMgmt);
-    gArmAngSensor       =new ArmAngSensor();
-    gTailAngSensor      =new TailAngSensor();
+    //gArmAngSensor       =new ArmAngSensor();
+    //gTailAngSensor      =new TailAngSensor();
     // 判定_オブジェクトの作成
     gMileageConditions           = new MileageConditions();
     gArmAngConditions            = new ArmAngConditions();
-    gTailAngConditions           = new TailAngConditions();
+   /gTailAngConditions           = new TailAngConditions();
     gTurnAngConditions           = new TurnAngConditions();
 
     // 区間_オブジェクトの作成

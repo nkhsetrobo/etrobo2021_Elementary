@@ -8,6 +8,9 @@
 #include "XPosition.h"
 #include "YPosition.h"
 #include "MileageSensor.h"
+#include "ArmAngSensor.h"
+#include "ArmTailMotorMgmt.h"
+#include "TailAngSensor.h"
 //#include "ScenarioCurveLineTracer.h"
 //#include "ev3api.h"
 
@@ -20,6 +23,9 @@ class Walker{
             XPosition *xposition,
             YPosition *yposition,
             MileageSensor *mileagesensor);
+            //ArmAngSensor  *armangsensor,
+            //ArmTailMotorMgmt *ArmTailMotorMgmt,
+            //TailAngSensor *tailangsensor);                    
     ~Walker();
     virtual void run();
     virtual void init(float param[] );
@@ -35,6 +41,11 @@ class Walker{
     MileageSensor   *mMileageSensor;
     //ScenarioCurveLineTracer  *mScenarioCurveLineTracer;
     PID             *mPID;
+   // ArmTailMotorMgmt   *mArmTailMotorMgmt;
+    //ArmAngSensor        *mArmAngSensor;
+    //TailAngSensor      *mTailAngSensor;
+
+    
     private:
     
 };
