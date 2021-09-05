@@ -22,6 +22,8 @@ APPL_CXXOBJS += \
 	MileageConditions.o\
 	TailAngConditions.o\
 	TurnAngConditions.o
+
+	
 	
 
 	
