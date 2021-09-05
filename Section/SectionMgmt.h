@@ -5,8 +5,14 @@ class SectionMgmt{
     public:
         SectionMgmt();
         ~SectionMgmt();
-        void addSection();
-        bool run();
+        void addSection(Section *Sec);
+        void reset();
+        virtual bool run();
+    
+    protected:
+        Section *mSection[100];
+        int mSectionIdx;
+        int mLastIdx;
 };
 
 #endif

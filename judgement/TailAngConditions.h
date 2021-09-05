@@ -2,15 +2,21 @@
 #define TAIL_ANG_CONDITIONS
 
 #include "judgement.h"
+#include "TailAngSensor.h"
 
 class TailAngConditions : public judgement{
     public:
         TailAngConditions();
         ~TailAngConditions();
         bool judge();
-        void setParameter(float Miles);
+        void setParameter(float TailAng);
+        float getValue();
     private:
-        float mMiles;
+        float mTailAng;
+        float aTailAng;
+        float Sum;
+        int UorD;
+        int mode;
 }
 
 
