@@ -41,25 +41,25 @@ bool SectionRun::Run(){
 }
 
 
-Walker SectionRun::witchWalker(int part){
-    /*switch (part)
-    {
-    case SIMPWALKER:
-        mWalker = (Walker*)(new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gSpeedSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor,gScenarioCurveLineTracer));
-        break;
-    case SCENARIOCURVE:
-        mWalker = (Walker*)(new ScenarioCurveLineTracer());
-        break;
-    case SCENARIOLINE:
-        mWalker = (Walker*)(new ScenarioLineTracer());
-        break;
-    case LINETRACER:
-        mWalker = (Walker*)(new LineTracer(gWheelMotorMgmt,gBrightnessSensor, gTurnAngSensor,gSpeedSensor,gXPosition,gYPosition,gMileageSensor));
-        break;
-    default:
-        //コメント
-        break;
-    }*/
+// Walker SectionRun::witchWalker(int part){
+//     /*switch (part)
+//     {
+//     case SIMPWALKER:
+//         mWalker = (Walker*)(new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gSpeedSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor,gScenarioCurveLineTracer));
+//         break;
+//     case SCENARIOCURVE:
+//         mWalker = (Walker*)(new ScenarioCurveLineTracer());
+//         break;
+//     case SCENARIOLINE:
+//         mWalker = (Walker*)(new ScenarioLineTracer());
+//         break;
+//     case LINETRACER:
+//         mWalker = (Walker*)(new LineTracer(gWheelMotorMgmt,gBrightnessSensor, gTurnAngSensor,gSpeedSensor,gXPosition,gYPosition,gMileageSensor));
+//         break;
+//     default:
+//         //コメント
+//         break;
+//     }*/
 
-    return mWalker;
-}
+//     return mWalker;
+// }

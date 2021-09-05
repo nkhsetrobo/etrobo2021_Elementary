@@ -17,7 +17,7 @@ class SectionRun{
         SectionRun();
         ~SectionRun();
         bool Run();
-        Walker *witchWalker(int part);
+        // Walker *witchWalker(int part);
 
         enum WALKER_PART{
             SIMPWALKER,     //0
