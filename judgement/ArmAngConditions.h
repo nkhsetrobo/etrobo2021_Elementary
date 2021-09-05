@@ -9,7 +9,7 @@ class ArmAngConditions : public judgement{
         ArmAngConditions();
         ~ArmAngConditions();
         bool judge();
-        void setParameter(float ArmAng);
+        void setParameter(float ArmAng[]);
         float getValue();
 
      private:
