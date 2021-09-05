@@ -7,6 +7,9 @@ class Derailing : public SectionMgmt{
     public:
         Derailing();
         bool Run();
+    private:
+        int SCidx;
+        int SClast;
 }
 
 #endif
