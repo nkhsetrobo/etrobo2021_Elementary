@@ -7,7 +7,7 @@ extern ScenarioCurveLineTracer    *gScenarioCurveLineTracer;
 extern MileageConditions           *gMileageConditions;
 extern TurnAngConditions           *gTurnAngConditions;
 extern ArmAngConditions            *gArmAngConditions;    
-extern TailAngConditions           *gTalAngConditions;    
+extern TailAngConditions           *gTailAngConditions;    
 
 SectionRun::SectionRun(){
     //mWalkMethod配列の初期化
