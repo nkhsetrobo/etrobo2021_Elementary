@@ -20,8 +20,4 @@ bool judgement::judge(){
     return true;
 }
 
-float judgement::getValue(){
-
-    return 0;
-}
 

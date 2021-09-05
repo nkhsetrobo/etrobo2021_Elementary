@@ -13,7 +13,6 @@ class judgement {
     judgement();
     ~judgement();
     virtual bool judge();
-    virtual float getValue();
 
     protected:
    
