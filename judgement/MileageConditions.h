@@ -2,11 +2,10 @@
 #define MILEAGE_CONDITIONS
 
 #include "judgement.h"
-#include "MileageSensor.h"
 
 class MileageConditions : public judgement{
     public:
-        MileageConditions(MileageSensor *Mileage);
+        MileageConditions();
         ~MileageConditions();
         bool judge();
         void setParameter(float Miles[]);
@@ -18,6 +17,6 @@ class MileageConditions : public judgement{
         float Sum;
         int FwardorBward;
         int mode;
-}
+};
 
 #endif
