@@ -15,7 +15,7 @@ class ScenarioCurveLineTracer : public SimpleWalker{
 
         void run();
         void init(float param[]);
-        float calcdistance();
+        float calcdistance(float cx,float cy,float sx,float sy);
         void setPosition(float x,float y);
 
 

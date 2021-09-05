@@ -16,7 +16,7 @@ APPL_CXXOBJS += \
 	TurnAngSensor.o\
 	PID.o\
 	LineTracer.o\
-	ScenarioCurveLineTracer.o
+	ScenarioCurveLineTracer.o\
 	ArmAngConditions.o\
 	judgement.o\
 	MileageConditions.o\

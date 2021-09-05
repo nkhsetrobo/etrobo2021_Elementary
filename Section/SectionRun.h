@@ -4,7 +4,7 @@
 #include "Walker.h"
 #include "SimpleWalker.h"
 #include "ScenarioCurveLineTracer.h"
-#include "ScenarioLineTracer.h"
+//#include "ScenarioLineTracer.h"
 #include "LineTracer.h"
 
 #include "MileageConditions.h"
