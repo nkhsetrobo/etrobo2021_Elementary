@@ -21,9 +21,11 @@ APPL_CXXOBJS += \
 	judgement.o\
 	MileageConditions.o\
 	TailAngConditions.o\
-	TurnAngConditions.o
+	TurnAngConditions.o\
+	Derailing.o\
+	SectionRun.o
 
-	
+
 	
 
 	
