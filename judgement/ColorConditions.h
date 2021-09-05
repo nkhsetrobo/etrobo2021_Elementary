@@ -9,7 +9,6 @@ class ColorConditions : public judgement{
         ~ColorConditions();
         bool judge();
         void setParameter(float Brightness[]);
-        float getValue();
     private:
         float mBrightness;
         float aBrightness;
