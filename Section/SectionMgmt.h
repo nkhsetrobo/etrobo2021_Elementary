@@ -1,18 +1,32 @@
 #ifndef SECTION_MGMT
 #define SECTION_MGMT
 
+#include "SectionParameters.h"
+#include "SectionRun.h"
+
 class SectionMgmt{
     public:
         SectionMgmt();
         ~SectionMgmt();
-        void addSection(Section *Sec);
+        void addSection();
         void reset();
         virtual bool run();
     
     protected:
-        Section *mSection[100];
+        SectionRun *mSection[100];
         int mSectionIdx;
         int mLastIdx;
+        SectionRun         *mSectionRun;
+        SectionParameters   *mSectionParameters;
+
+        typedef struct 
+        {
+            float Rmethod[20];   //走法の配列
+            float Jmethod[20];   //判定の配列
+            int Jselect;    //判定の選択
+            int Rselect;    //走法の選択
+        }SecParam;
+        
 };
 
 #endif
