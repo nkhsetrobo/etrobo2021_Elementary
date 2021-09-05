@@ -3,13 +3,13 @@
 
 #include "SectionMgmt.h"
 
-class SectionParameters : public SectionParameters{
+class SectionParameters{
     public:
         SectionParameters();
         int transition(int Section);
     private:
         int SecParam;
 
-}
+};
 
 #endif
