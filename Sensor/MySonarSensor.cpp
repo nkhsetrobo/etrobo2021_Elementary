@@ -6,7 +6,10 @@ MySonarSensor::MySonarSensor(ev3api::SonarSensor& sonarsensor)
 
 }
 
-MySonarSensor::~MySonarSensor(){
+float MySonarSensor::getValue() 
+
+{
+
 
 }
 
