@@ -27,6 +27,12 @@
 #include "ScenarioCurveLineTracer.h"
 #include "SelfPosEst.h"
 
+#include "MileageConditions.h"
+#include "ArmAngConditions.h"
+#include "TailAngConditions.h"
+#include "TurnAngConditions.h"
+
+
 // デストラクタ問題の回避
 // https://github.com/ETrobocon/etroboEV3/wiki/problem_and_coping
 void *__dso_handle=0;
@@ -46,7 +52,6 @@ Motor       gRightWheel(PORT_B);
 Clock       gClock;
 // オブジェクトの定義
  StageMgmt    *gStageMgmt;
- SectionMgmt  *gSectionMgmt;
  BrightnessSensor *gBrightnessSensor;
  MyColorSensor *gMyColorSensor;
  SimpleWalker *gSimpleWalker;
@@ -59,6 +64,22 @@ Clock       gClock;
  LineTracer      *gLineTracer;
  ScenarioCurveLineTracer  *gScenarioCurveLineTracer;
  SelfPosEst     *gSelfPosEst;
+
+  //判定クラスの定義
+ MileageConditions    *gMileageConditions;
+ TurnAngConditions    *gTurnAngConditions;
+ ArmAngConditions     *gArmAngConditions;
+ TailAngConditions    *gTailAngConditions;
+
+ //区間クラスの定義
+ SectionParameters   *gSectionParameters;
+ SectionMgmt         *gSectionMgmt;
+ SectionRun          *gSectionRun;
+ SpeedCourse         *gSpeedCourse;
+ SlalomA             *gSlalomA;
+ SlalomB             *gSlalomB;
+ Derailing           *gDerailing;
+
  
 
 
@@ -70,7 +91,6 @@ static void user_system_create() {
 
     // オブジェクトの作成
     gStageMgmt          = new StageMgmt();
-    gSectionMgmt        = new SectionMgmt();
     gBrightnessSensor   = new BrightnessSensor();
     gMyColorSensor      = new MyColorSensor(gBrightnessSensor,gColorSensor);
     gWheelMotorMgmt     =new WheelMotorMgmt(gLeftWheel,gRightWheel);
@@ -83,6 +103,22 @@ static void user_system_create() {
     gScenarioCurveLineTracer  =new ScenarioCurveLineTracer(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gSelfPosEst         =new SelfPosEst(gMileageSensor,gXPosition,gYPosition,gTurnAngSensor,gWheelMotorMgmt);
     
+    // 判定_オブジェクトの作成
+    gMileageConditions           = new MileageConditions(gMileageSensor);
+    gArmAngConditions            = new ArmAngConditions(gArmAngSensor);
+    gTailAngConditions           = new TailAngConditions(gTailAngSensor);
+    gTurnAngConditions           = new TurnAngConditions(gTurnAngSensor);
+
+    // 区間_オブジェクトの作成
+    gSectionParameters          = new SectionParameters();
+    gSectionMgmt                = new SectionMgmt(gSectionParameters);
+    gSectionRun                 = new SectionRun(gMileageConditions);
+    gSpeedCourse                = new SpeedCourse();
+    gSlalomA                    = new SlalomA();
+    gSlalomB                    = new SlalomB();
+    gDerailing                  = new Derailing();
+
+
     // 初期化完了通知
     ev3_led_set_color(LED_ORANGE);
 }
