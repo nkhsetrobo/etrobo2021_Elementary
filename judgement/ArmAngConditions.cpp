@@ -1,15 +1,18 @@
 #include "ArmAngConditions.h"
+#include "ArmangSensor.h"
 
 ArmAngConditions::ArmAngConditions()
     :judgement()
+     {
 
+        }
 
 //判定する
 bool ArmAngConditions::judge(){
     //上下判定
     if(UorD==0){
         //計測した値が越えたら終了(上昇)
-        if(aArmAng < mArmAngSensor->getValue()){
+        if(aArmAng < mArmAngSensor->getValue(){
             return true;
         } else {
             return false;
