@@ -2,7 +2,6 @@
 #define TAIL_ANG_CONDITIONS
 
 #include "judgement.h"
-#include "TailAngSensor.h"
 
 class TailAngConditions : public judgement{
     public:
