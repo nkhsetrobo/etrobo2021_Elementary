@@ -10,6 +10,6 @@ class Derailing : public SectionMgmt{
     private:
         int SCidx;
         int SClast;
-}
+};
 
 #endif
