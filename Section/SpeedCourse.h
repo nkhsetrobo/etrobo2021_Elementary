@@ -7,7 +7,11 @@ class SpeedCourse : public SectionMgmt{
     public:
         SpeedCourse();
         bool Run();
-}
+    private:
+        int SCidx;
+        int SClast;
+
+};
 
 
 #endif
