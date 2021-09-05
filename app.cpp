@@ -109,10 +109,10 @@ static void user_system_create() {
     gSelfPosEst         =new SelfPosEst(gMileageSensor,gXPosition,gYPosition,gTurnAngSensor,gWheelMotorMgmt);
     
     // 判定_オブジェクトの作成
-    gMileageConditions           = new MileageConditions(gMileageSensor);
-    gArmAngConditions            = new ArmAngConditions(gArmAngSensor);
-    gTailAngConditions           = new TailAngConditions(gTailAngSensor);
-    gTurnAngConditions           = new TurnAngConditions(gTurnAngSensor);
+    gMileageConditions           = new MileageConditions();
+    gArmAngConditions            = new ArmAngConditions();
+    gTailAngConditions           = new TailAngConditions();
+    gTurnAngConditions           = new TurnAngConditions();
 
     // 区間_オブジェクトの作成
     gSectionParameters          = new SectionParameters();
