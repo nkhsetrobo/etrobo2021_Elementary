@@ -20,7 +20,8 @@ APPL_CXXOBJS += \
 	ArmAngConditions.o\
 	judgement.o\
 	MileageConditions.o\
-	TailAngConditions.o
+	TailAngConditions.o\
+	TurnAngConditions.o
 	
 
 	
