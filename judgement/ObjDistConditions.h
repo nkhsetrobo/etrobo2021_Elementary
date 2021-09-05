@@ -8,6 +8,13 @@ class ObjDistConditions : public judgement{
         ObjDistConditions();
         ~ObjDistConditions();
         bool judge();
-        void setParameter(float []);
+        void setParameter(float ObjDistance[]);
+
+    private:
+
+        float mObjDistance;
+        float aObjDistance;
+        float Sum;
+        int mode;
 };
 #endif
