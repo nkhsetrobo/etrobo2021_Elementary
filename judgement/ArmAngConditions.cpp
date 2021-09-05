@@ -28,9 +28,6 @@ bool ArmAngConditions::judge(){
 
 }
 
-float ArmAngConditions::getValue(){
-    return mArmAng;
-}
 
 /**
  * パラメータを設定する

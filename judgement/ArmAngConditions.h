@@ -10,7 +10,6 @@ class ArmAngConditions : public judgement{
         ~ArmAngConditions();
         bool judge();
         void setParameter(float ArmAng[]);
-        float getValue();
 
      private:
         float mArmAng;
