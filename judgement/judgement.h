@@ -2,8 +2,8 @@
 #define JUDGEMENT_H_
 #include "MySensor.h"
 #include "TurnAngSensor.h"
-//#include "ArmAngSensor.h"
-//#include "TailAngSensor.h"
+#include "ArmAngSensor.h"
+#include "TailAngSensor.h"
 #include "MileageSensor.h"
 
 
@@ -19,8 +19,8 @@ class judgement {
    
         MileageSensor            *mMileageSensor;
         TurnAngSensor            *mTurnAngSensor;
-        //ArmAngConditions     *mArmAngConditions;
-        //TailAngConditions    *mTailAngConditions;
+        ArmAngSensor              *mArmAngSensor;
+        TailAngSensor               *mTailAngSensor;
         
 };
 

@@ -8,7 +8,7 @@ class ArmAngSensor : public MySensor{
         ArmAngSensor();
 
         float getValue();
-        void  update(float Value)
+        void  update(float Value);
     
     private:
         float Armang;

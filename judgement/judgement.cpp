@@ -1,15 +1,15 @@
 #include "judgement.h"
 extern MileageSensor            *gMileageSensor;
 extern TurnAngSensor            *gTurnAngSensor;
-//extern ArmAngConditions     *gArmAngCondition;
-//extern TailAngConditions    *gTailAngCondition;
+extern ArmAngSensor               *gArmAngSensor;
+extern TailAngSensor             *gTailAngSensor;
 
-judgement::judgement():
+judgement::judgement()
 {
     mMileageSensor = gMileageSensor;
     mTurnAngSensor = gTurnAngSensor;
-    //mArmAngConditions  = gArmAngConditions;
-    //mTailAngConditions = gTailAngConditions;
+    mArmAngSensor = gArmAngSensor;
+    mTailAngSensor = gTailAngSensor;
 }
 
 judgement::~judgement(){

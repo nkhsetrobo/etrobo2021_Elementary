@@ -1,5 +1,6 @@
 #include "TailAngConditions.h"
 
+
 TailAngConditions::TailAngConditions()
     :judgement()
 
