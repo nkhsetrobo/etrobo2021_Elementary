@@ -8,9 +8,6 @@ bool ColorConditions::judge(){
 
 }
 
-float ColorConditions::getValue(){
-
-}
 
 /**
  * パラメータを設定する

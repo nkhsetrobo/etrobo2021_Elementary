@@ -27,9 +27,6 @@ bool MileageConditions::judge(){
     }
 }
 
-float MileageConditions::getValue(){
-    return mMiles;
-}
 
 /**
  * パラメータを設定する

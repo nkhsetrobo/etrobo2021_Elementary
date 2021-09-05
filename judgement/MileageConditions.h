@@ -9,7 +9,6 @@ class MileageConditions : public judgement{
         ~MileageConditions();
         bool judge();
         void setParameter(float Miles[]);
-        float getValue();
 
     private:
         float mMiles;
