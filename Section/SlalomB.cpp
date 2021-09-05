@@ -1,9 +1,8 @@
 #include "SlalomB.h"
 
 
-SlalomB::SlalomB(){
-
-}
+SlalomB::SlalomB()
+    :SectionMgmt();
 
 bool SlalomB::Run()[
     
