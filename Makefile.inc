@@ -24,8 +24,8 @@ APPL_CXXOBJS += \
 	TurnAngConditions.o\
 	Derailing.o\
 	SectionRun.o\
-	ArmAngSensor.o\
-	TailAngSensor.o
+	ArmAngSendor.o\
+	TAilAngSEnsor.o
 
 
 	

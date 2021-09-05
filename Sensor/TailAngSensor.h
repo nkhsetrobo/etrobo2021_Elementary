@@ -6,8 +6,8 @@
 class TailAngSensor : public MySensor{
     public:
         TailAngSensor();
-        float update();
-        float getValue();
+        void update();
+        float getValue(float Value);
     private:
         float Tail;
 };

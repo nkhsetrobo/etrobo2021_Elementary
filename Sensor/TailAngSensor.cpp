@@ -15,5 +15,5 @@ void TailAngSensor::update(float Value)
 
 {
 
-         Tail=Value;
+      Tail=Value;
 }
