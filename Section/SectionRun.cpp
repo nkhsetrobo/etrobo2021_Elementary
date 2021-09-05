@@ -21,9 +21,9 @@ SectionRun::SectionRun(){
     mJudgeMethod[TURNANG] = gTurnAngConditions;
     mJudgeMethod[ARMANG] = gArmAngConditions; 
     mJudgeMethod[TAILANG] = gTailAngConditions; 
-
+    
 }
-
+//メソッド（走法、判定）初期化
 
 SectionRun::~SectionRun(){
     //コメント
@@ -33,12 +33,13 @@ SectionRun::~SectionRun(){
 
 bool SectionRun::Run(){
 
-
+    //判定のRUN　結果がFALSEならそのままかえす
     mWalker->run();
-
+    
     return false;
     
 }
+
 
 Walker SectionRun::witchWalker(int part){
     /*switch (part)
