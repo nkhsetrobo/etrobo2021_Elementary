@@ -18,6 +18,6 @@ class ArmAngConditions : public judgement{
         float Sum;
         int UorD;
         int mode;
-}
+};
 
 #endif

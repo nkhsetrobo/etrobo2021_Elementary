@@ -14,6 +14,6 @@ class ColorConditions : public judgement{
         float mBrightness;
         float aBrightness;
 
-}
+};
 
 #endif
