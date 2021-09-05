@@ -3,6 +3,9 @@
 
 TailAngConditions::TailAngConditions()
     :judgement()
+{
+
+}
 
 //判定する
 bool TailAngConditions::judge(){
