@@ -6,25 +6,6 @@ ArmAngConditions::ArmAngConditions()
 
 //判定する
 void ArmAngConditions::judge(){
-
-
-}
-
-/**
- * パラメータを設定する
- * @param ArmAng アーム角度
-*/
-
-void ArmAngConditions::setParameter(float ArmAng){
-    mArmAng = ArmAng;
-#include "ArmAngConditions.h"
-
-ArmAngConditions::ArmAngConditions(ArmAngSensor *Angle)
-    :judgement();
-
-
-//判定する
-void ArmAngConditions::judge(){
     //上下判定
     if(UorD==0){
         //計測した値が越えたら終了(上昇)
