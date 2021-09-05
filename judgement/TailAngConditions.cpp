@@ -34,7 +34,7 @@ bool TailAngConditions::judge(){
 
 void TailAngConditions::setParameter(float TailAng[]){
     //計測器から自己位置を取得
-    mTailAng = mTailAngSensor->getValue():
+    mTailAng = mTailAngSensor->getValue();
     //パラメータを取得
     aTailAng = TailAng[0];
     Sum = Sum + aTailAng;
