@@ -9,6 +9,5 @@ class ObjDistConditions : public judgement{
         ~ObjDistConditions();
         bool judge();
         void setParameter(float []);
-        float getValue();
 };
 #endif
