@@ -6,7 +6,7 @@
     * @param rightTurn
 */
 
-TurnAngConditions::TurnAngConditions(TurnAngSensor *TurnAng)
+TurnAngConditions::TurnAngConditions()
     :judgement(){
 
     }
