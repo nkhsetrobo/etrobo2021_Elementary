@@ -6,8 +6,8 @@ extern LineTracer                 *gLineTracer;
 extern ScenarioCurveLineTracer    *gScenarioCurveLineTracer;
 extern MileageConditions           *gMileageConditions;
 extern TurnAngConditions           *gTurnAngConditions;
-//extern ArmAngConditions            *gArmAngConditions;     未接続
-//extern TailAngConditions           *gTalAngConditions;    未接続
+extern ArmAngConditions            *gArmAngConditions;    
+extern TailAngConditions           *gTalAngConditions;    
 
 SectionRun::SectionRun(){
     //mWalkMethod配列の初期化
@@ -19,8 +19,8 @@ SectionRun::SectionRun(){
     //mJudgeMethod配列の初期化
     mJudgeMethod[MILEAGE] = gMileageConditions;
     mJudgeMethod[TURNANG] = gTurnAngConditions;
-    //mJudgeMethod[ARMANG] = gArmAngConditions;  未実装
-    //mJudgeMethod[TAILANG] = gTailAngConditions;  未実装
+    mJudgeMethod[ARMANG] = gArmAngConditions;  未実装
+    mJudgeMethod[TAILANG] = gTailAngConditions;  未実装
 
 }
 
