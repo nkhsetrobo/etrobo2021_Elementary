@@ -2,6 +2,9 @@
 
 MileageConditions::MileageConditions()
     :judgement()
+{
+    
+}
 
 
 //判定する
