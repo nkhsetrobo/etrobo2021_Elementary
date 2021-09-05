@@ -7,6 +7,10 @@ TailAngConditions::TailAngConditions()
 
 }
 
+float TailAngConditions::getValue(){
+    return Sum;
+}
+
 //判定する
 bool TailAngConditions::judge(){
     //上下判定
