@@ -1,11 +1,11 @@
 #include "MileageConditions.h"
 
 MileageConditions::MileageConditions()
-    :judgement();
+    :judgement()
 
 
 //判定する
-void MileageConditions::judge(){
+bool MileageConditions::judge(){
     //前後判定
     if(FwardorBward == 0){
         //計測した値が越えたら終了(前進)

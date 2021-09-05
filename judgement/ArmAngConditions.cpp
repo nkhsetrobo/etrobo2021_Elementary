@@ -5,7 +5,7 @@ ArmAngConditions::ArmAngConditions()
 
 
 //判定する
-void ArmAngConditions::judge(){
+bool ArmAngConditions::judge(){
     //上下判定
     if(UorD==0){
         //計測した値が越えたら終了(上昇)
