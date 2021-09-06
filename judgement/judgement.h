@@ -18,8 +18,8 @@ class judgement {
    
         MileageSensor            *mMileageSensor;
         TurnAngSensor            *mTurnAngSensor;
-        ArmAngSensor              *mArmAngSensor;
-        TailAngSensor               *mTailAngSensor;
+        ArmAngSensor             *mArmAngSensor;
+        TailAngSensor            *mTailAngSensor;
         
 };
 

@@ -1,8 +1,8 @@
 #include "judgement.h"
 extern MileageSensor            *gMileageSensor;
 extern TurnAngSensor            *gTurnAngSensor;
-extern ArmAngSensor               *gArmAngSensor;
-extern TailAngSensor             *gTailAngSensor;
+extern ArmAngSensor             *gArmAngSensor;
+extern TailAngSensor            *gTailAngSensor;
 
 judgement::judgement()
 {
