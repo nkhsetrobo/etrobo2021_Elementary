@@ -2,34 +2,30 @@
 #include "ArmTailMotorMgmt.h"
 
 ArmTailMotorMgmt::ArmTailMotorMgmt(ev3api::Motor& armmotor,
-                                   ev3api::Motor& tailmotor,
-                                   ArmAngSensor* armangsensor,
-                                   TailAngSensor* tailangsensor)
-    :arm(armmotor),
-     tail(tailmotor),
-     as(armangsensor),
-     ts(tailangsensor)
+                                   //ev3api::Motor& tailmotor,
+                                   ArmAngSensor* armangsensor)
+                                   //TailAngSensor* tailangsensor)
+    :mArmMotor(armmotor),
+     //tail(tailmotor),
+     mArmAngSensor(armangsensor),
+     //ts(tailangsensor)
 
     {
 
 }
 
-ArmTailMotorMgmt::~ArmTailMotorMgmt(){
-
-}
-
 void ArmTailMotorMgmt::armDriveOrder(int pwm){
-    am.setPWM(pwm);
+    mArmMotor.setPWM(pwm);
 }
 
-void ArmTailMotorMgmt::tailDriveOrder(int pwm){
-    tm.setPWM(pwm);
-}
+// //void ArmTailMotorMgmt::tailDriveOrder(int pwm){
+//     tm.setPWM(pwm);
+// }
 
 void ArmTailMotorMgmt::armAngUpdate(){
-    aas->update(arm.getCount());
+    mArmAngSensor->update(mArmMotor.getCount());
 }
 
-void ArmTailMotorMgmt::tailAngUpdate(){
-    tas->update(tail.getCount());
-}
+// void ArmTailMotorMgmt::tailAngUpdate(){
+//     tas->update(tail.getCount());
+// }

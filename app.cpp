@@ -19,7 +19,7 @@
 #include "SectionMgmt.h"
 #include "SimpleWalker.h"
 #include "WheelMotorMgmt.h"
-//#include "ArmTailMotorMgmt.h"
+#include "ArmTailMotorMgmt.h"
 #include "XPosition.h"
 #include "YPosition.h"
 #include "MileageSensor.h"
@@ -57,6 +57,7 @@ ColorSensor gColorSensor(PORT_2);
 TouchSensor gTouchSensor(PORT_1);
 Motor       gLeftWheel(PORT_C);
 Motor       gRightWheel(PORT_B);
+Motor       gArmMotor(PORT_A);
 Clock       gClock;
 // オブジェクトの定義
  StageMgmt    *gStageMgmt;
@@ -64,7 +65,7 @@ Clock       gClock;
  MyColorSensor *gMyColorSensor;
  SimpleWalker *gSimpleWalker;
  WheelMotorMgmt *gWheelMotorMgmt;
- //ArmTailMotorMgmt *gArmTailMotorMgmt;
+ ArmTailMotorMgmt *gArmTailMotorMgmt;
  XPosition       *gXPosition;
  YPosition       *gYPosition;
  //SpeedSensor     *gSpeedSensor;
@@ -105,7 +106,7 @@ static void user_system_create() {
     gBrightnessSensor   = new BrightnessSensor();
     gMyColorSensor      = new MyColorSensor(gBrightnessSensor,gColorSensor);
     gWheelMotorMgmt     =new WheelMotorMgmt(gLeftWheel,gRightWheel);
-    //gArmTailMotorMgmt   =new ArmTailMotorMgmt(gArmmotor,gTailmotor,gArmAngSensor,gTailAngSensor,gTail);
+    gArmTailMotorMgmt   =new ArmTailMotorMgmt(gArmmotor,gArmAngSensor);
     gSimpleWalker       =new SimpleWalker(gWheelMotorMgmt,gBrightnessSensor,gTurnAngSensor,gXPosition,gYPosition,gMileageSensor);
     gXPosition          =new XPosition();
     gYPosition          =new YPosition();
