@@ -6,12 +6,15 @@
 class LineTracer : public SimpleWalker{
     public:
         LineTracer(WheelMotorMgmt *motor,
-                    BrightnessSensor *brightness,
-                    TurnAngSensor *turnangsensor,
-                   // SpeedSensor *speedsensor,
-                    XPosition *xposition,
-                    YPosition *yposition,
-                    MileageSensor *mileagesensor);
+                BrightnessSensor *brightness,
+                //SpeedSensor *speedsensor,
+                 ArmTailMotorMgmt   *armtailmotormgmt,
+                 XPosition          *xposition,
+                 YPosition          *yposition,
+                 MileageSensor      *mileagesensor,
+                 TurnAngSensor      *turnangsensor, 
+                 ArmAngSensor       *armangsensor,
+                 TailAngSensor      *tailangsensor);
         void run();
         void init(float param[]);
         float calcTurn(float val1);

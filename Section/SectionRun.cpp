@@ -28,7 +28,7 @@ SectionRun::SectionRun(){
 SectionRun::~SectionRun(){
     //コメント
     delete mJudgement;
-    delete mWalker;
+    //delete mWalker;
 }
 
 bool SectionRun::Run(){

@@ -24,9 +24,10 @@ APPL_CXXOBJS += \
 	TurnAngConditions.o\
 	Derailing.o\
 	SectionRun.o\
-	ArmAngSendor.o\
+	ArmAngSensor.o\
 	TailAngSensor.o\
-	ArmTailMotorMgmt.o
+	ArmTailMotorMgmt.o \
+	SectionParameters.o
 
 
 	

@@ -8,12 +8,15 @@
 class SimpleWalker : public Walker {
     public:
         SimpleWalker(WheelMotorMgmt *motor,
-                    BrightnessSensor *brightness,
-                    //SpeedSensor *speedsensor,
-                    TurnAngSensor *turnagsensor,
-                    XPosition *xposition,
-                    YPosition *yposition,
-                    MileageSensor *mileagesensor);
+                BrightnessSensor *brightness,
+                //SpeedSensor *speedsensor,
+                 ArmTailMotorMgmt   *armtailmotormgmt,
+                 XPosition          *xposition,
+                 YPosition          *yposition,
+                 MileageSensor      *mileagesensor,
+                 TurnAngSensor      *turnangsensor, 
+                 ArmAngSensor       *armangsensor,
+                 TailAngSensor      *tailangsensor);
         ~SimpleWalker();
         void run();
         void init();

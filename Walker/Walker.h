@@ -16,35 +16,37 @@
 
 class Walker{
     public:
-    Walker(WheelMotorMgmt *motor,
-            BrightnessSensor *brightness,
-            //SpeedSensor *speedsensor,
-            TurnAngSensor *turnangsensor,
-            XPosition *xposition,
-            YPosition *yposition,
-            MileageSensor *mileagesensor);
-            //ArmAngSensor  *armangsensor,
-            //ArmTailMotorMgmt *ArmTailMotorMgmt,
-            //TailAngSensor *tailangsensor);                    
-    ~Walker();
-    virtual void run();
-    virtual void init(float param[] );
+    Walker(WheelMotorMgmt *gWheelMotorMgmt,
+         BrightnessSensor *gBrightnessSensor,
+         ArmTailMotorMgmt *gArmTailMotorMgmt,
+         XPosition       *gXPosition,
+          YPosition       *gYPosition,
+        //SpeedSensor     *gSpeedSensor;
+        MileageSensor   *gMileageSensor,
+          TurnAngSensor   *gTurnAngSensor,
+        ArmAngSensor   *gArmAngSensor,
+        TailAngSensor  *gTailAngSensor);
+
+
+     ~Walker();
+        virtual void run();
+         virtual void init(float param[] );
 
 
     protected:
     WheelMotorMgmt *mWheelMotorMgmt;
     BrightnessSensor *mBrightnessSensor;
-    SpeedSensor     *mSpeedSensor;
+    //SpeedSensor     *mSpeedSensor;
     TurnAngSensor   *mTurnAngSensor;
+    ArmTailMotorMgmt   *mArmTailMotorMgmt;
     XPosition       *mXPosition;
     YPosition       *mYPosition;
     MileageSensor   *mMileageSensor;
     //ScenarioCurveLineTracer  *mScenarioCurveLineTracer;
+    ArmAngSensor        *mArmAngSensor;
+    TailAngSensor      *mTailAngSensor;
     PID             *mPID;
-   // ArmTailMotorMgmt   *mArmTailMotorMgmt;
-    //ArmAngSensor        *mArmAngSensor;
-    //TailAngSensor      *mTailAngSensor;
-
+    
     
     private:
     

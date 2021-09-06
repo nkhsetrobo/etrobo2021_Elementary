@@ -7,7 +7,7 @@ ArmTailMotorMgmt::ArmTailMotorMgmt(ev3api::Motor& armmotor,
                                    //TailAngSensor* tailangsensor)
     :mArmMotor(armmotor),
      //tail(tailmotor),
-     mArmAngSensor(armangsensor),
+     mArmAngSensor(armangsensor)
      //ts(tailangsensor)
 
     {

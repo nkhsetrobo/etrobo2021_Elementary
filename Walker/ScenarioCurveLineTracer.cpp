@@ -2,17 +2,16 @@
 
 //コンストラクタ
 ScenarioCurveLineTracer::ScenarioCurveLineTracer(WheelMotorMgmt *motor,
-                        BrightnessSensor *brightness,
-                        TurnAngSensor *turnangsensor,
-                        XPosition *xposition,
-                        YPosition *yposition,
-                        MileageSensor *mileagesensor)
-    :SimpleWalker(motor,
-                  brightness,
-                  turnangsensor,
-                  xposition,
-                  yposition,
-                  mileagesensor),
+                BrightnessSensor *brightness,
+                //SpeedSensor *speedsensor,
+                 ArmTailMotorMgmt   *armtailmotormgmt,
+                 XPosition          *xposition,
+                 YPosition          *yposition,
+                 MileageSensor      *mileagesensor,
+                 TurnAngSensor      *turnangsensor, 
+                 ArmAngSensor       *armangsensor,
+                 TailAngSensor      *tailangsensor)
+    :SimpleWalker(motor,brightness,armtailmotormgmt,xposition,yposition,mileagesensor,turnangsensor,armangsensor,tailangsensor),
   mx(0),   
   my(0),
   kp(0),

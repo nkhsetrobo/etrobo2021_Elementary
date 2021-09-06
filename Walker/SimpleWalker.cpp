@@ -6,16 +6,19 @@
     * @param rightWheel 左モータ
 */
 SimpleWalker::SimpleWalker(WheelMotorMgmt *motor,
-                            BrightnessSensor *brightness,
-                           //SpeedSensor *speedsensor,
-                            TurnAngSensor *turnagsensor,
-                            XPosition *xposition,
-                            YPosition *yposition,
-                            MileageSensor*mileagesensor)
-                                                     
-    :Walker(motor,brightness,turnagsensor,xposition,yposition,mileagesensor),
+                BrightnessSensor *brightness,
+                //SpeedSensor *speedsensor,
+                 ArmTailMotorMgmt   *armtailmotormgmt,
+                 XPosition          *xposition,
+                 YPosition          *yposition,
+                 MileageSensor      *mileagesensor,
+                 TurnAngSensor      *turnangsensor, 
+                 ArmAngSensor       *armangsensor,
+                 TailAngSensor      *tailangsensor)
+    :Walker(motor,brightness,armtailmotormgmt,xposition,yposition,mileagesensor,turnangsensor,armangsensor,tailangsensor),
      mForward(0),
-     mTurn(0){
+     mTurn(0)
+     {
      }
 
 

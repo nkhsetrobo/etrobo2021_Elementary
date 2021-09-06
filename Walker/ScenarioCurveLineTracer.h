@@ -6,11 +6,15 @@
 class ScenarioCurveLineTracer : public SimpleWalker{
     public:
         ScenarioCurveLineTracer(WheelMotorMgmt *motor,
-                                 BrightnessSensor *brightness,
-                                TurnAngSensor *turnagsensor,
-                                XPosition *xposition,
-                                YPosition *yposition,
-                                 MileageSensor *mileagesensor);
+                BrightnessSensor *brightness,
+                //SpeedSensor *speedsensor,
+                 ArmTailMotorMgmt   *armtailmotormgmt,
+                 XPosition          *xposition,
+                 YPosition          *yposition,
+                 MileageSensor      *mileagesensor,
+                 TurnAngSensor      *turnangsensor, 
+                 ArmAngSensor       *armangsensor,
+                 TailAngSensor      *tailangsenso);
         ~ScenarioCurveLineTracer();
 
         void run();
