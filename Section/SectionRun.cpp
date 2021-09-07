@@ -1,11 +1,11 @@
 #include "SectionRun.h"
 
-extern SimpleWalker               *gSimpleWalker;
 //extern ScenarioLineTracer         *gScenarioLineTracer;  未実装
+extern MileageConditions           *gMileageConditions;
+extern TurnAngConditions            *gTurnAngConditions;  
+extern SimpleWalker               *gSimpleWalker;     
 extern LineTracer                 *gLineTracer;
 extern ScenarioCurveLineTracer    *gScenarioCurveLineTracer;
-extern MileageConditions           *gMileageConditions;
-extern TurnAngConditions           *gTurnAngConditions;
 extern ArmAngConditions            *gArmAngConditions;    
 extern TailAngConditions           *gTailAngConditions;    
 
