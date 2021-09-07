@@ -31,6 +31,7 @@
 
 #include "MileageConditions.h"
 #include "ArmAngConditions.h"
+//#include "ColorConditions.h"
 #include "TailAngConditions.h"
 #include "TurnAngConditions.h"
 
@@ -88,7 +89,7 @@ Clock       gClock;
  TurnAngConditions    *gTurnAngConditions;
  ArmAngConditions     *gArmAngConditions;
  TailAngConditions    *gTailAngConditions;
-
+ //ColorConditions      *gColorConditions;
  //区間クラスの定義
  SectionMgmt         *gSectionMgmt;
  SectionRun          *gSectionRun;
@@ -103,7 +104,7 @@ Clock       gClock;
  //* EV3システム生成
  
 static void user_system_create() {
-  gArmWalker    = new ArmWalker(gArmMotor);
+  
 
     // [TODO] タッチセンサの初期化に2msのdelayがあるため、ここで待つ
     tslp_tsk(2U * 1000U);
@@ -122,16 +123,16 @@ static void user_system_create() {
     gLineTracer         =new LineTracer(gWheelMotorMgmt,gBrightnessSensor,gArmTailMotorMgmt, gXPosition,gYPosition,gMileageSensor,gTurnAngSensor,gArmAngSensor,gTailAngSensor);
     gScenarioCurveLineTracer  =new ScenarioCurveLineTracer(gWheelMotorMgmt,gBrightnessSensor,gArmTailMotorMgmt, gXPosition,gYPosition,gMileageSensor,gTurnAngSensor,gArmAngSensor,gTailAngSensor);
     gSelfPosEst         =new SelfPosEst(gMileageSensor,gXPosition,gYPosition,gTurnAngSensor,gWheelMotorMgmt);
-    
-    //gArmAngSensor       =new ArmAngSensor();
-    //gTailAngSensor      =new TailAngSensor();
+    gArmAngSensor       =new ArmAngSensor();
+    gTailAngSensor      =new TailAngSensor();
+    gArmWalker    = new ArmWalker(gArmMotor);
     // 判定_オブジェクトの作成 
      
     gMileageConditions           = new MileageConditions();
     gArmAngConditions            = new ArmAngConditions();
     gTailAngConditions           = new TailAngConditions();
     gTurnAngConditions           = new TurnAngConditions();
-
+   // gColorConditions             =new ColorConditions();
     // 区間_オブジェクトの作成
     gSectionMgmt                = new SectionMgmt();
     gSectionRun                 = new SectionRun();
