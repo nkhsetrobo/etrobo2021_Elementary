@@ -90,7 +90,6 @@ Clock       gClock;
  TailAngConditions    *gTailAngConditions;
 
  //区間クラスの定義
- SectionParameters   *gSectionParameters;
  SectionMgmt         *gSectionMgmt;
  SectionRun          *gSectionRun;
  SpeedCourse         *gSpeedCourse;
@@ -134,7 +133,6 @@ static void user_system_create() {
     gTurnAngConditions           = new TurnAngConditions();
 
     // 区間_オブジェクトの作成
-    gSectionParameters          = new SectionParameters();
     gSectionMgmt                = new SectionMgmt();
     gSectionRun                 = new SectionRun();
     // gSpeedCourse                = new SpeedCourse();
