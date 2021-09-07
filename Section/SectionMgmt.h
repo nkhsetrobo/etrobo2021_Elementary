@@ -1,7 +1,6 @@
 #ifndef SECTION_MGMT
 #define SECTION_MGMT
 
-#include "SectionParameters.h"
 #include "SectionRun.h"
 
 class SectionMgmt{
@@ -17,7 +16,6 @@ class SectionMgmt{
         int mSectionIdx;
         int mLastIdx;
         SectionRun         *mSectionRun;
-        SectionParameters   *mSectionParameters;
 
         typedef struct 
         {

@@ -1,10 +1,8 @@
 #include "SectionMgmt.h"
-extern SectionParameters   *gSectionParameters;
 extern SectionRun          *gSectionRun;
 SectionMgmt::SectionMgmt(){
     mSectionIdx = 0;
     mLastIdx = 0;
-    mSectionParameters = gSectionParameters;
     mSectionRun = gSectionRun;
 }
 
@@ -22,6 +20,8 @@ void SectionMgmt::addSection(){
 bool SectionMgmt::run(){
     return true;
 }
+
+       
 
 
 void SectionMgmt::reset()

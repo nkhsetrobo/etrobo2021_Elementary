@@ -11,12 +11,14 @@
 #include "TurnAngConditions.h"
 #include "ArmAngConditions.h"
 #include "TailAngConditions.h"
+#include "judgement.h"
 
 class SectionRun{
     public:
         SectionRun();
         ~SectionRun();
         bool Run();
+        void Select(int walker,int jug);
         // Walker *witchWalker(int part);
 
         enum WALKER_PART{

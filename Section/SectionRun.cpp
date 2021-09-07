@@ -33,15 +33,40 @@ SectionRun::~SectionRun(){
 
 bool SectionRun::Run(){
 
-    //判定のRUN　結果がFALSEならそのままかえす
-    mWalker->run();
-    
-    return false;
-    
+     //judgeの判定がtrueだったらtrueを返す
+  if( mJudgement->judge()==true)
+    {
+        return true;
+    }
+        
+     //判定のRUN　結果がFALSEならそのままかえす   
+        mWalker->run();
+     return false;
+
+            
 }
 
-//
+//walker jugeを受け取る引数を二つ用意する メソッドを作る
 
+
+     
+  void SectionRun::Select(int walker,int jug){
+
+    mWalker=mWalkMethod[walker];
+    mJudgement= mJudgeMethod[jug];
+
+    }
+
+
+
+     //void  SerectoRun::Serect(){
+
+       // if(  ){
+
+         //}
+
+
+     //}
 
 
 // Walker SectionRun::witchWalker(int part){

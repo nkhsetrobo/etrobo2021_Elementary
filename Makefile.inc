@@ -27,7 +27,6 @@ APPL_CXXOBJS += \
 	ArmAngSensor.o\
 	TailAngSensor.o \
 	ArmTailMotorMgmt.o\
-	SectionParameters.o\
 	ArmWalker.o
 	
 
