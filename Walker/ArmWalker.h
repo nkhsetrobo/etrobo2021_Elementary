@@ -1,7 +1,10 @@
 #ifndef ARM_WALKER_H
 #define ARM_WALKER_H
 
-class ArmWalker : public Walker {
+#include "ev3api.h"
+#include "Motor.h"
+
+class ArmWalker{
     public:
         ArmWalker(ev3api::Motor& motor);
         ~ArmWalker();

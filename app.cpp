@@ -39,6 +39,8 @@
 #include "SlalomB.h"
 #include "Derailing.h"
 #include "ArmAngSensor.h"
+
+#include "ArmWalker.h"
 //#include "TailAngSensor.h"
 
 
@@ -78,8 +80,10 @@ Clock       gClock;
  ArmAngSensor   *gArmAngSensor;
  TailAngSensor  *gTailAngSensor;
 
+ ArmWalker      *gArmWalker;
+
   //判定クラスの定義
-  
+
  MileageConditions    *gMileageConditions;
  TurnAngConditions    *gTurnAngConditions;
  ArmAngConditions     *gArmAngConditions;
@@ -100,6 +104,8 @@ Clock       gClock;
  //* EV3システム生成
  
 static void user_system_create() {
+    gArmWalker   = new ArmWalker(gArmMotor);
+
     // [TODO] タッチセンサの初期化に2msのdelayがあるため、ここで待つ
     tslp_tsk(2U * 1000U);
 
@@ -181,7 +187,10 @@ void tracer_task(intptr_t exinf) {
     if (ev3_button_is_pressed(BACK_BUTTON)) {
         wup_tsk(MAIN_TASK);  // バックボタン押下
     } else {
+        gArmWalker->setPWM(50);
+        gArmWalker->run();
         gStageMgmt->run();  // 走行
+        
     }
     
     ext_tsk();
