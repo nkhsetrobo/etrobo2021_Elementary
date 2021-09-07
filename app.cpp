@@ -104,7 +104,7 @@ Clock       gClock;
  //* EV3システム生成
  
 static void user_system_create() {
-    gArmWalker   = new ArmWalker(gArmMotor);
+  gArmWalker    = new ArmWalker(gArmMotor);
 
     // [TODO] タッチセンサの初期化に2msのdelayがあるため、ここで待つ
     tslp_tsk(2U * 1000U);
@@ -123,9 +123,11 @@ static void user_system_create() {
     gLineTracer         =new LineTracer(gWheelMotorMgmt,gBrightnessSensor,gArmTailMotorMgmt, gXPosition,gYPosition,gMileageSensor,gTurnAngSensor,gArmAngSensor,gTailAngSensor);
     gScenarioCurveLineTracer  =new ScenarioCurveLineTracer(gWheelMotorMgmt,gBrightnessSensor,gArmTailMotorMgmt, gXPosition,gYPosition,gMileageSensor,gTurnAngSensor,gArmAngSensor,gTailAngSensor);
     gSelfPosEst         =new SelfPosEst(gMileageSensor,gXPosition,gYPosition,gTurnAngSensor,gWheelMotorMgmt);
+    
     //gArmAngSensor       =new ArmAngSensor();
     //gTailAngSensor      =new TailAngSensor();
-    // 判定_オブジェクトの作成
+    // 判定_オブジェクトの作成 
+     
     gMileageConditions           = new MileageConditions();
     gArmAngConditions            = new ArmAngConditions();
     gTailAngConditions           = new TailAngConditions();
@@ -139,7 +141,7 @@ static void user_system_create() {
     // gSlalomA                    = new SlalomA();
     // gSlalomB                    = new SlalomB();
     // gDerailing                  = new Derailing();
-    
+  
 
 
     // 初期化完了通知
