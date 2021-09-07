@@ -2,6 +2,9 @@
 
 ColorConditions::ColorConditions()
     :judgement()
+{
+    
+}
 
 bool ColorConditions::judge(){
     //青を判定？
