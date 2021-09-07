@@ -6,7 +6,8 @@ class StageMgmt {
         StageMgmt();
         ~StageMgmt();
         bool run();
-    
+        //後で消去
+        SectionRun  *mSectionRun;
     private:
         int state;
 };

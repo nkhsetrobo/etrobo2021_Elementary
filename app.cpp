@@ -135,7 +135,6 @@ static void user_system_create() {
    // gColorConditions             =new ColorConditions();
     // 区間_オブジェクトの作成
     gSectionMgmt                = new SectionMgmt();
-    gSectionRun                 = new SectionRun();
     // gSpeedCourse                = new SpeedCourse();
     // gSlalomA                    = new SlalomA();
     // gSlalomB                    = new SlalomB();

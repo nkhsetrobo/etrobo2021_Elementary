@@ -18,7 +18,7 @@ class SectionRun{
         SectionRun();
         ~SectionRun();
         bool Run();
-        void Select(int walker,int jug);
+        void Select(float mwalk[] ,int walker,float mjug[] ,int jug);
         // Walker *witchWalker(int part);
 
         enum WALKER_PART{

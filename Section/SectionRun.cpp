@@ -50,11 +50,13 @@ bool SectionRun::Run(){
 
 
      
-  void SectionRun::Select(int walker,int jug){
-
+  void SectionRun::Select(float mwalk[] ,int walker,float mjug[] ,int jug)
+  {
+      
     mWalker=mWalkMethod[walker];
     mJudgement= mJudgeMethod[jug];
-
+    mWalker->init(mwalk);
+    mJudgement->init(mjug);
     }
 
 

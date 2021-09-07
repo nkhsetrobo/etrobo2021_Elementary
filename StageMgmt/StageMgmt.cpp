@@ -10,7 +10,9 @@ extern ScenarioCurveLineTracer*gScenarioCurveLineTracer;
 
 StageMgmt::StageMgmt() {
 
-}
+    mSectionRun = new SectionRun();
+    SectionRun->Select(float mwalk[] ,int walker,float mjug[] ,int jug);
+    }
 
 StageMgmt::~StageMgmt() {
 
