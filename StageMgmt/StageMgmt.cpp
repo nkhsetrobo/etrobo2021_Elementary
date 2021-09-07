@@ -19,7 +19,7 @@ StageMgmt::~StageMgmt() {
 bool StageMgmt::run() {
     //gSimpleWalker->setParameter(50,20);
     //gSimpleWalker->run();
-        float param[]={50,0.5,30,40,40,1};
+        float param[]={85,0.5,150,20,40,1};
         gLineTracer->init(param);
         gLineTracer->run();
 

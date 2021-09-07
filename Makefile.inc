@@ -28,6 +28,7 @@ APPL_CXXOBJS += \
 	TailAngSensor.o\
 	ArmTailMotorMgmt.o \
 	SectionParameters.o
+	
 
 
 	

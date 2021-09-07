@@ -79,6 +79,7 @@ Clock       gClock;
  TailAngSensor  *gTailAngSensor;
 
   //判定クラスの定義
+  
  MileageConditions    *gMileageConditions;
  TurnAngConditions    *gTurnAngConditions;
  ArmAngConditions     *gArmAngConditions;
