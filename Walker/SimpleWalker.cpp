@@ -40,11 +40,12 @@ void SimpleWalker::run(){
     * @param foward 前進
     * @param turn 旋回
 */  
-  void SimpleWalker::setParameter(int forward,int turn){
-      mForward = forward;
-      mTurn = turn;
+  void SimpleWalker::setParameter(float param[])
+  {
 
-  }
+       mForward=param[0];
+      mTurn=param[1];
+}
 
 
 

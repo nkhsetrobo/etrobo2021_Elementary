@@ -3,15 +3,19 @@
 #include "LineTracer.h"
 #include "ScenarioCurveLineTracer.h"
 
+
 extern SimpleWalker *gSimpleWalker;
 extern LineTracer *gLineTracer;
 extern ScenarioCurveLineTracer*gScenarioCurveLineTracer;
 
 
 StageMgmt::StageMgmt() {
-
+    
+    float walk[]={30,30};
+    float sjug[]={50};
     mSectionRun = new SectionRun();
-    SectionRun->Select(float mwalk[] ,int walker,float mjug[] ,int jug);
+    mSectionRun->Select(walk ,SectionRun::SIMPWALKER,sjug,SectionRun::MILEAGE);
+
     }
 
 StageMgmt::~StageMgmt() {

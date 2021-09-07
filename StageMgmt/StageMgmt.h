@@ -1,5 +1,6 @@
 #ifndef STAGE_MGMT
 #define STAGE_MGMT
+#include "SectionRun.h"
 
 class StageMgmt {
     public:

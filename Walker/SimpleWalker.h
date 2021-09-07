@@ -20,7 +20,7 @@ class SimpleWalker : public Walker {
         ~SimpleWalker();
         void run();
         void init();
-        void setParameter(int forward,int turn);
+        void setParameter(float param[]);
 
     private:
         int mForward;
