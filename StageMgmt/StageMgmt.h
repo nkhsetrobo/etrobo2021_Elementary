@@ -7,10 +7,13 @@ class StageMgmt {
         StageMgmt();
         ~StageMgmt();
         bool run();
+        void Sjudge();
+        void LineTracer();
         //後で消去
-        SectionRun  *mSectionRun;
+       // SectionRun  *mSectionRun;
     private:
         int state;
+
 };
 
 #endif

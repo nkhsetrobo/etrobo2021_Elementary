@@ -56,7 +56,7 @@ bool SectionRun::Run(){
     mWalker=mWalkMethod[walker];
     mJudgement= mJudgeMethod[jug];
     mWalker->init(mwalk);
-    mJudgement->init(mjug);
+    //mJudgement->init(mjug);
     }
 
 

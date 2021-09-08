@@ -174,6 +174,7 @@ void main_task(intptr_t unused) {
     stp_cyc(CYC_TRACER);
     sta_cyc(CYC_SENSOR);
     
+    //ev3_sensor_config(touch_sensor, TOUCH_SENSOR);
 
     user_system_destroy();  // 終了処理
 
@@ -187,8 +188,6 @@ void tracer_task(intptr_t exinf) {
     if (ev3_button_is_pressed(BACK_BUTTON)) {
         wup_tsk(MAIN_TASK);  // バックボタン押下
     } else {
-        gArmWalker->setPWM(50);
-        gArmWalker->run();
         gStageMgmt->run();  // 走行
         
     }

@@ -1,4 +1,3 @@
-#include "ColorConditions.h"
 
 ColorConditions::ColorConditions()
     :judgement()

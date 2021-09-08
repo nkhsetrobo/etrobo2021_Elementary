@@ -39,7 +39,11 @@ void LineTracer::run(){
     brightness=mBrightnessSensor->getValue();
     mTurn=calcTurn(brightness);
 
-    setParameter((int)mSpeed,(int)mTurn);
+    float param[2];
+    param[0] = 50;
+    param[1] = mTurn;
+
+    setParameter(param);
     SimpleWalker::run();
 
     

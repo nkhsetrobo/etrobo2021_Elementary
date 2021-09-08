@@ -66,7 +66,7 @@ if(target>0){
 }
 
   
-setParameter((int)Speed,(int)distance2);
+//setParameter((int)Speed,(int)distance2);
 
 //printf("x %f y %f turnVal %f distance %f\n",x,y,turnVal,distance);
 //printf("操作量 %f\n",distance2);
@@ -74,29 +74,29 @@ setParameter((int)Speed,(int)distance2);
 SimpleWalker::run();
 
  
-}
+//}
 
 
-void ScenarioCurveLineTracer::init(float param[])
-{
+// void ScenarioCurveLineTracer::init(float param[])
+// {
   
-  Speed=param[0];
-  kp=param[1];
-  ki=param[2];
-  kd=param[3];
-  target=param[4];
+//   Speed=param[0];
+//   kp=param[1];
+//   ki=param[2];
+//   kd=param[3];
+//   target=param[4];
   
     
-    mPID->setKp(kp);
-    mPID->setKi(ki);
-    mPID->setKd(kd);
-    mPID->setTarget(fabs(target));
+//     mPID->setKp(kp);
+//     mPID->setKi(ki);
+//     mPID->setKd(kd);
+//     mPID->setTarget(fabs(target));
     
-  float distance =mMileageSensor->getValue();
-  float valu = mTurnAngSensor->getValue();
-  float x=mXPosition->getValue();
-  float y=mYPosition->getValue();
-  float turnVal=mTurnAngSensor->getValue();
+//   float distance =mMileageSensor->getValue();
+//   float valu = mTurnAngSensor->getValue();
+//   float x=mXPosition->getValue();
+//   float y=mYPosition->getValue();
+//   float turnVal=mTurnAngSensor->getValue();
   
 
 
