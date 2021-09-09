@@ -59,15 +59,11 @@ float LineTracer::calcTurn(float val1){
 
     float val1_turn=mPID->getOperation(val1);
 
-    // if(edge==1){
+    if(edge==1){
+        val1_turn = val1_turn*-1;
+    }
 
-    //     val1_turn = val1_turn*-1;
-   
-    // }else{
-
-    // }
-
-   return val1_turn*(-1*edge);
+   return val1_turn;
 
 
 }
