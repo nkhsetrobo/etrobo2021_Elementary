@@ -40,7 +40,7 @@ void LineTracer::run(){
     mTurn=calcTurn(brightness);
 
     float param[2];
-    param[0] = 50;
+    param[0] = mSpeed;
     param[1] = mTurn;
 
     setParameter(param);
@@ -59,15 +59,15 @@ float LineTracer::calcTurn(float val1){
 
     float val1_turn=mPID->getOperation(val1);
 
-    if(edge==1){
+    // if(edge==1){
 
-        edge=edge*-1;
+    //     val1_turn = val1_turn*-1;
    
-    }else{
+    // }else{
 
-    }
+    // }
 
-   return val1_turn;
+   return val1_turn*(-1*edge);
 
 
 }

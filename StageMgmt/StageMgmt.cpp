@@ -55,7 +55,7 @@ bool StageMgmt::run() {
 void StageMgmt::LineTracer()
 {
   //printf("debug\n");
-    float param[]={85,0.5,150,20,40,1};
+    float param[]={65,0.5,150,20,40,1};
         gLineTracer->init(param);
         gLineTracer->run();
         //LineTracer->run();
